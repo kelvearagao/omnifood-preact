@@ -7,12 +7,12 @@ const Header = () => (
 		<nav>
 			<div class="row">
 				<img
-					src="../assets/img/logo-white.png"
+					src="../assets/resources/img/logo-white.png"
 					alt="Omnifood logo"
 					class="logo"
 				/>
 				<img
-					src="../assets/img/logo.png"
+					src="../assets/resources/img/logo.png"
 					alt="Omnifood logo"
 					class="logo-black"
 				/>
