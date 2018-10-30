@@ -13,8 +13,6 @@ class Home extends Component {
 		runScript();
 	}
 
-	componentWillUnmount() {}
-
 	render() {
 		return (
 			<div>

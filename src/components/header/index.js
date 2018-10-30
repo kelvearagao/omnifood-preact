@@ -1,6 +1,4 @@
-import { h } from 'preact';
-import { Link } from 'preact-router/match';
-import style from './style';
+import Navbar from '../navbar';
 
 const Header = () => (
 	<header>
@@ -16,23 +14,7 @@ const Header = () => (
 					alt="Omnifood logo"
 					class="logo-black"
 				/>
-				<ul class="main-nav js--main-nav">
-					<li>
-						<a href="#features">Food delivery</a>
-					</li>
-					<li>
-						<a href="#works">How it works</a>
-					</li>
-					<li>
-						<a href="#cities">Our cities</a>
-					</li>
-					<li>
-						<a href="#plans">Sign up</a>
-					</li>
-				</ul>
-				<a class="mobile-nav-icon js--nav-icon">
-					<i class="ion-navicon-round" />
-				</a>
+				<Navbar />
 			</div>
 		</nav>
 		<div class="hero-text-box">
@@ -52,14 +34,3 @@ const Header = () => (
 );
 
 export default Header;
-
-/*
-	<header class={style.header}>
-		<h1>Preact App</h1>
-		<nav>
-			<Link activeClassName={style.active} href="/">Home</Link>
-			<Link activeClassName={style.active} href="/profile">Me</Link>
-			<Link activeClassName={style.active} href="/profile/john">John</Link>
-		</nav>
-	</header>
-*/
