@@ -1,8 +1,8 @@
 import { h } from 'preact';
 import { Link } from 'preact-router/match';
 
-const Steps = () => (
-	<section class="section-steps" id="works">
+const Steps = (props) => (
+	<section class="section-steps" id="works" ref={props.innerRef}>
         <div class="row">
             <h2>How it works &mdash; Simple as 1, 2, 3</h2>
         </div>

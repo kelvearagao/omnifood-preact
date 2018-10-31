@@ -7,6 +7,7 @@ import Steps from '../../components/section/steps';
 import Showcases from '../../components/section/showcases';
 import Features from '../../components/section/features';
 import runScript from './script';
+import Waypoint from 'react-waypoint';
 
 class Home extends Component {
 	componentDidMount() {
@@ -14,11 +15,14 @@ class Home extends Component {
 	}
 
 	render() {
+		console.log('teste')
 		return (
 			<div>
 				<Features />
 				<Showcases />
-				<Steps />
+				<Waypoint onEnter={() => console.log('entrou')}>
+					<Steps />
+				</Waypoint>
 				<Cities />
 				<Testimonials />
 				<Plans />
