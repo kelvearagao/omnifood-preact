@@ -2,19 +2,14 @@ import './style.css';
 import MobileNav from '../mobilenav';
 import { Component } from 'preact';
 
+/**
+ * Todo: remover jquery; Componentizar main-nav;
+ * 
+ */
 class Navbar extends Component {
-	state = {
-		mobileNavWasClicked: false
-	}
 
 	handleMobileNavClick() {
 		this.$el.slideToggle(200);
-		this.setState({ mobileNavWasClicked: true });
-	}
-
-	constructor(props) {
-		super(props);
-		this.handleMobileNavClick = this.handleMobileNavClick.bind(this);
 	}
 
 	componentDidMount() {
@@ -24,7 +19,7 @@ class Navbar extends Component {
 	render() {
 		return (
 			<div>
-				<ul class="main-nav js--main-nav">
+				<ul class="main-nav js--main-nav ">
 					<li>
 						<a href="#features">Food delivery</a>
 					</li>
@@ -38,18 +33,8 @@ class Navbar extends Component {
 						<a href="#plans">Sign up</a>
 					</li>
 				</ul>
-				<a
-					class="mobile-nav-icon js--nav-icon"
-					onClick={this.handleMobileNavClick}
-				>
-					<i
-						class={
-							!this.state.mobileNavWasClicked
-								? 'ion-navicon-round'
-								: 'ion-close-round'
-						}
-					/>
-				</a>
+
+				<MobileNav onClick={this.handleMobileNavClick.bind(this)} />
 			</div>
 		);
 	}
